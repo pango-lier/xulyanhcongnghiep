@@ -1,0 +1,21 @@
+ssh key
+a,236b#eAx_o
+Generating public/private rsa key pair.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/xulyanhc/.ssh/id_rsa.
+Your public key has been saved in /home/xulyanhc/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:m/dUTXUieOnHH5zdWpkI7ZsTAy9ze/wUgIgAFoGNvZs
+The key's randomart image is:
++---[RSA 2048]----+
+|  ==+.. . ..+.. o|
+| o.o   . ..+o+ .o|
+|    .      o=.+ B|
+|   .       o.BoX+|
+|    o   S   +.O++|
+|   E     o   *.oo|
+|        o . . o..|
+|         . o    .|
+|            .    |
++----[SHA256]-----+
