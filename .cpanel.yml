@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/xulyanhc/public_html/
+    - /bin/cp -rf app $DEPLOYPATH
+    - /bin/cp -rf resources $DEPLOYPATH
