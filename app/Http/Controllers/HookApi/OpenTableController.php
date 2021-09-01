@@ -16,6 +16,7 @@ class OpenTableController extends Controller
            'name'=>$request->name,
            'fields'=>$request->fields,
            'page_id'=>$request->page_id??1,
+           'priority_pos'=>time(),
        ]);
         return response([
            'status'=>'ok',

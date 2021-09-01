@@ -19,6 +19,7 @@ class CreateOpenTablesTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('page_id')->default(1);
             $table->jsonb('fields');
+            $table->unsignedInteger('priority_pos')->default(0);
             $table->timestamps();
         });
     }

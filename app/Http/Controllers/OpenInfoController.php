@@ -16,9 +16,20 @@ class OpenInfoController extends Controller
         ->select(['tables.id','table.name','table.fields','open_infos.row'])
         ->groupBy('tables.id', 'open_infos.row')
         ->simplePaginate(5);
+        $tempTableId=0;
+        $temps=[];
+        $temp=[];
         foreach ($tables as $table) {
-            $data['table']=  $table;
+            $table->row=json_decode($table->row);
+            $temp[]=$table;
+            if ($table->id!=$tempTableId) {
+                $temps[]=$temp;
+                $temp=[];
+            }
         }
-        return view('pages.open', ['tables'=>$data]);
+        if ($temp!=[]) {
+            $temps[]=$temp;
+        }
+        return view('pages.open', ['tables'=>$temps]);
     }
 }
