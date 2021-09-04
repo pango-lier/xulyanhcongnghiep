@@ -12,7 +12,7 @@ class OpenInfoController extends Controller
     public function index(Request $request)
     {
         $tables= OpenTable::join('open_infos', 'open_infos.table_id', '=', 'open_tables.id')
-        ->where('user_id', Auth::id())
+        ->where('user_id', auth()->guard('admin_users')->id()??1)
         ->select(['tables.id','table.name','table.fields','open_infos.row'])
         ->groupBy('tables.id', 'open_infos.row')
         ->simplePaginate(5);

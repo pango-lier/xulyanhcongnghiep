@@ -36,27 +36,33 @@
                           <i class="mdi mdi-view-dashboard-outline menu-icon"></i>
                           <span class="menu-title">Quản trị viên</span>
                         </a>
-                     </li>   
+                     </li>
                   @endif
                     <li class="nav-item">
                         <a class="nav-link" href="admin/intercooperation">
                           <i class="mdi mdi-view-dashboard-outline menu-icon"></i>
                           <span class="menu-title">Đối tác</span>
                         </a>
-                     </li> 
+                     </li>
                   <li class="nav-item">
                         <a class="nav-link" href="admin/comment">
                           <i class="mdi mdi-view-dashboard-outline menu-icon"></i>
                           <span class="menu-title">Bình luận</span>
                         </a>
-                    </li>       
+                    </li>
                   <li class="nav-item">
                         <a class="nav-link" href="admin/setting">
                           <i class="mdi mdi-view-dashboard-outline menu-icon"></i>
                           <span class="menu-title">Cài đặt</span>
                         </a>
-                          
-                    </li>
 
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin/open">
+                          <i class="mdi mdi-view-dashboard-outline menu-icon"></i>
+                          <span class="menu-title">Open Api</span>
+                        </a>
+
+                    </li>
                 </ul>
             </nav>

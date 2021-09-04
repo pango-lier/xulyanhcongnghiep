@@ -14,10 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('open/info/store', 'HookApi/OpenInfoController@store');
-Route::put('open/info/update', 'HookApi/OpenInfoController@update');
-Route::post('open/table/store', 'HookApi/OpenTableController@store');
-Route::put('open/table/update', 'HookApi/OpenTableController@update');
+Route::post('open/info/store', 'HookApi\OpenInfoController@store');
+Route::put('open/info/update', 'HookApi\OpenInfoController@update');
+Route::post('open/table/store', 'HookApi\OpenTableController@store');
+Route::put('open/table/update', 'HookApi\OpenTableController@update');
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();

@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use App\AdminUser;
 
 class OpenApiMiddleware
 {
@@ -15,6 +16,11 @@ class OpenApiMiddleware
      */
     public function handle($request, Closure $next)
     {
+        $user=AdminUser::where('password',$request->header('open-api-key'))->first();
+        if(!empty($user)){
+        $request->user_api=$user;
         return $next($request);
+        }
+        abort(403);
     }
 }
