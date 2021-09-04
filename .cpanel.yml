@@ -6,3 +6,4 @@ deployment:
     - /bin/cp -rf resources $DEPLOYPATH
     - /bin/cp -rf routes $DEPLOYPATH
     - /bin/cp -rf config $DEPLOYPATH
+    - /bin/cp -rf database $DEPLOYPATH
