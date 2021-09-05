@@ -112,7 +112,7 @@ Route::group(['prefix'=>'admin','namespace'=>'admin','middleware'=>['adminlogin'
         Route::post('/store', 'OpenApiController@store');
         Route::get('/edit/{id}', 'OpenApiController@edit');
         Route::post('/update/{id}', 'OpenApiController@update');
-        Route::get('/destroy/{id}', 'OpenApiController@destroy');
+        Route::get('/info/{uuid}/destroy', 'OpenApiController@destroy');
     });
 });
 

@@ -14,12 +14,12 @@ class CreateOpenTablesTable extends Migration
     public function up()
     {
         Schema::create('open_tables', function (Blueprint $table) {
-            $table->id();
+            $table->uuid('id')->primary();
             $table->string('name');
             $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('page_id')->default(1);
+            $table->unsignedBigInteger('page_id')->nullable();
             $table->jsonb('fields');
-            $table->unsignedInteger('priority_pos')->default(0);
+            $table->unsignedInteger('priority_show')->default(0);
             $table->timestamps();
         });
     }

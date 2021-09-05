@@ -9,8 +9,9 @@ margin-top: 20px;
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeahead.js-bootstrap4-css@1.0.0/typeaheadjs.min.css">
 @endsection
 @section('content')
-  <div class="mb-3">
-            <a class="btn btn-success" href="admin/post/create">Thêm</a></div>
+  {{--<div class="mb-3">
+            <a class="btn btn-success" href="admin/post/create">Thêm</a>
+        </div>--}}
 @if(session('success'))
 <div class="alert alert-fill-success" role="alert">
                     <i class="mdi mdi-alert-circle"></i>
@@ -29,6 +30,7 @@ margin-top: 20px;
                         <thead class="thead-dark">
                         <tr>
                             <th scope="col">#</th>
+                            <th scope="col">Time</th>
                             @foreach ($table[0]->fields as $key => $th)
                             <th scope="col">{{$th}}</th>
                             @endforeach
@@ -38,11 +40,12 @@ margin-top: 20px;
                     @foreach($table as $stt=> $row)
                         <tr>
                             <th  scope="row">{{$stt}}</th>
+                            <td  scope="row">{{$row->created_at}}</td>
                             @foreach($row->row as $key=>$td)
                             <td>{{$td}}</td>
                             @endforeach
                             <td>
-                              <a href="javascript:void(0)" style="color: red" onclick="redirect_del('admin/post/destroy/{{$row->id}}')" >Xóa</a>
+                              <a href="javascript:void(0)" style="color: red" onclick="redirect_del('admin/open/info/{{$row->id}}/destroy')" >Xóa</a>
                             </td>
                         </tr>
                     @endforeach

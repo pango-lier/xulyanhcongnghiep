@@ -15,9 +15,7 @@ class CreateOpenInfosTable extends Migration
     {
         Schema::create('open_infos', function (Blueprint $table) {
             $table->id();
-            $table->ipAddress('ip_address')->nullable();
-            $table->macAddress('mac_address')->nullable();
-            $table->unsignedBigInteger('table_id')->nullable();
+            $table->uuid('table_id');
             $table->jsonb('row')->nullable();
             $table->timestamps();
         });
