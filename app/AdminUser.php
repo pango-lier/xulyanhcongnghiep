@@ -33,4 +33,9 @@ class AdminUser extends Authenticatable
     	if($this->roles<=1) return true;
     	return false;
     }
+
+    public function pageTables()
+    {
+        return $this->hasMany('App\PageTable','admin_user_id','id');
+    }
 }

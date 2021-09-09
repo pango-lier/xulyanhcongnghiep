@@ -8,6 +8,8 @@ use App\AdminUser;
 use App\Http\Requests\CreateUserRequest;
 use App\Http\Requests\UpdateUserRequestValidator;
 use Illuminate\Support\Facades\Gate;
+use Str;
+
 class AdminUserController extends Controller
 {
     //
@@ -28,7 +30,11 @@ class AdminUserController extends Controller
     	$user->name=$request->name;
     	$user->password=bcrypt($request->password);
     	$user->roles=$request->roles;
-    	$user->save();
+        $user->save();
+        $user->pageTables()->create([
+            'id' => Str::uuid(),
+            'name'=>'Open Api',
+        ]);
     	return redirect('admin/admin_user')->with('success','Thêm tài khoản thành công .');
          }
          return redirect('admin/admin_user')->with('success','Thêm tài khoản không thành công .');
@@ -47,7 +53,7 @@ class AdminUserController extends Controller
                 return redirect()->back()->withErrors($validator)->withInput()->with('old_password',$request->password);
             }
         $cUser=auth()->guard('admin_users')->user();
-        if ($request->roles>=$cUser->roles){    
+        if ($request->roles>=$cUser->roles){
     	$user=AdminUser::find($id);
     	$user->email=$request->email;
     	$user->name=$request->name;

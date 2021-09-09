@@ -14,9 +14,10 @@ class OpenApiController extends Controller
     public function index(Request $request)
     {
         $tables= OpenTable::join('open_infos', 'open_infos.table_id', '=', 'open_tables.id')
-        ->where('open_tables.user_id', auth()->guard('admin_users')->id())
-        ->select(['open_tables.created_at','open_infos.id','open_infos.table_id','open_tables.name','open_tables.fields','open_infos.row'])
-        ->orderBy('open_tables.created_at','desc')
+        ->join('page_tables', 'open_tables.page_table_id', '=', 'page_tables.id')
+        ->where('page_tables.admin_user_id', auth()->guard('admin_users')->id())
+        ->select(['open_infos.created_at','open_infos.id','open_infos.table_id','open_tables.name','open_tables.fields','open_infos.row'])
+        ->orderBy('open_infos.created_at','desc')
         ->limit(20)
         ->get();
         $temps=[];

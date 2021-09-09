@@ -57,6 +57,11 @@
                         </a>
 
                     </li>
+                    <?php
+                    $pageTables=auth()->guard('admin_users')->user()->pageTables;
+                    if(!empty($pageTables)){
+                    ?>
+                    @foreach( $pageTables  as $pageTable)
                     <li class="nav-item">
                         <a class="nav-link" href="admin/open">
                           <i class="mdi mdi-view-dashboard-outline menu-icon"></i>
@@ -64,5 +69,8 @@
                         </a>
 
                     </li>
+                    @endforeach
+                <?php }
+                    ?>
                 </ul>
             </nav>

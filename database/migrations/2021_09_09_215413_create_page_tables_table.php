@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateOpenTablesTable extends Migration
+class CreatePageTablesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateOpenTablesTable extends Migration
      */
     public function up()
     {
-        Schema::create('open_tables', function (Blueprint $table) {
+        Schema::create('page_tables', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->string('name');
-            $table->uuid('page_table_id');
-            $table->jsonb('fields');
-            $table->unsignedInteger('priority_show')->default(0);
+            $table->unsignedBigInteger('admin_user_id');
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ class CreateOpenTablesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('open_tables');
+        Schema::dropIfExists('page_tables');
     }
 }
