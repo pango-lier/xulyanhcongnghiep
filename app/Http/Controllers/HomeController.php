@@ -51,9 +51,9 @@ class HomeController extends Controller
         //  $catdes=Catdes::take(3)->get();
         $intercooperations = Intercooperation::take(7)->latest()->get();
         $sliders = Slider::take(3)->latest()->get();
-        $posts = Post::simplePaginate(3, ['*'], 'post');
-        $products = Product::simplePaginate(4, ['*'], 'product');
-        return view('pages.home', ['posts' => $posts, 'sliders' => $sliders, 'products' => $products, 'intercooperations' => $intercooperations]);
+        $posts = Post::paginate(4, ['*'], 'post');
+        // $products = Product::simplePaginate(4, ['*'], 'product');
+        return view('pages.home', ['posts' => $posts, 'sliders' => $sliders, 'products' => $products??'', 'intercooperations' => $intercooperations]);
     }
     public function posts($slug, $id)
     {
