@@ -68,7 +68,7 @@
 
                     <div class="container">
 
-                        <div class="content wow">
+                        <div class="content row">
 
                             <h1 style="text-align: center;">{{ $row->name }}</h1>
 

@@ -120,7 +120,7 @@
 
 						</div>
 
-						<div class="copyRight">
+						<div class="copyRight" style="background-color: blue;color:white;font-weight:bold">
 
 							<p>{{$_footer_copy_right??''}}</p>
 

@@ -2,8 +2,9 @@
     <div class="top-head container">
         <div class="pull-left logo" style="margin-top:10px">
             <a href="/">
-                <img src="/storage/slider/logo.png" alt="{{ $_header_logo_title ?? '' }}" />
                 <p>{{ $_header_logo_title ?? '' }}</p>
+                <img style="width:80px;" src="/favicon.ico" alt="{{ $_header_logo_title ?? '' }}" />
+
             </a>
 
         </div>
@@ -37,10 +38,10 @@
 
             <div class="menuRight">
 
-                <a href="checkout"><i class="fa fa-shopping-cart"></i> Giỏ hàng<span id="cart-count"
+                {{-- <a href="checkout"><i class="fa fa-shopping-cart"></i> Giỏ hàng<span id="cart-count"
                         style="vertical-align: center; font-size: 20px;padding: 5px;text-decoration: underline; color: red;font-weight: bold">{{ session('cart-count') }}</span>
 
-                </a>
+                </a> --}}
 
                 <img class="btnMenu" src="/lib/assets/images/stick.png" alt="" />
 
