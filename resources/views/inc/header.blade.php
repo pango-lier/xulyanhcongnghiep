@@ -13,7 +13,7 @@
             <div class="lang"><a id="btnVi" href="vi.html"><img src="/lib/assets/images/vi.png" alt="" /></a><a
                     id="btnEn" href="en.html"><img src="/lib/assets/images/en.png" alt="" /></a></div>
 
-            <div class="hotline">Hotline: <span id="lbHotLine"> 0909045179</span></div>
+            <div class="hotline">Hotline: <span id="lbHotLine"> {{$_footer_phone_1??''}}</span></div>
 
             <div class="clr"></div>
 
