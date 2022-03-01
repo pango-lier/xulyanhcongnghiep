@@ -25,7 +25,7 @@ class HomeController extends Controller
      */
     public function __construct(Category $category)
     {
-        $cats = $category->getDataTreeChild(0);
+        $cats = $category->getChild();
         //  $settings=DB::table('settings')->select('config_value','config_key')->get();
         //$this->middleware('auth');
         view()->share('cats', $cats);
@@ -51,7 +51,7 @@ class HomeController extends Controller
         //  $catdes=Catdes::take(3)->get();
         $intercooperations = Intercooperation::take(7)->latest()->get();
         $sliders = Slider::take(3)->latest()->get();
-        $posts = Post::paginate(4, ['*'], 'post');
+        $posts = Post::paginate(5, ['*'], 'post');
         // $products = Product::simplePaginate(4, ['*'], 'product');
         return view('pages.home', ['posts' => $posts, 'sliders' => $sliders, 'products' => $products??'', 'intercooperations' => $intercooperations]);
     }
@@ -73,14 +73,15 @@ class HomeController extends Controller
         //$category=new Category();
         // $cats=$category->getDataTreeChild($id);
         $cat = Category::findOrFail($id);
+        $catChildIds=Category::where('parent_id',$cat->id)->pluck('id')->toArray();
         switch ($cat->type) {
             case 'product':
                 $intercooperations = Intercooperation::take(8)->latest()->get();
-                $products = Product::where('category_id', $id)->paginate(12);
+                $products = Product::where('category_id', $id)->orWhereIn('category_id',$catChildIds)->paginate(12);
                 return view('pages.cat_product', ['products' => $products, 'intercooperations' => $intercooperations, 'cat' => $cat]);
                 break;
             default:
-                $posts = Post::where('category_id', $id)->latest()->paginate(6);
+                $posts = Post::where('category_id', $id)->orWhereIn('category_id',$catChildIds)->latest()->paginate(6);
                 return view('pages.cat_posts', ['posts' => $posts, 'cat' => $cat]);
                 break;
         }
