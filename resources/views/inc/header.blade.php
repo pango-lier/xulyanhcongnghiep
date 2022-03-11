@@ -1,4 +1,3 @@
-
 <div id="header">
     <div class="top-head container">
         <div class="pull-left logo" style="margin-top:10px">
@@ -26,53 +25,52 @@
     </div>
     <div class="bot-head">
         <style>
-            @media all and (min-width: 992px) {
-                .navbar .nav-item .dropdown-menu {
-                    display: none;
-                    background-color: rgb(46, 46, 197);
-                }
+            #menu .nav-item .dropdown-menu {
+                display: none;
+                background-color: rgb(46, 46, 197);
+            }
 
-                .navbar .nav-item:hover .nav-link {}
+            #menu .nav-item:hover .nav-link {
+                display: block;
+            }
 
-                .navbar .nav-item:hover .dropdown-menu {
-                    display: block;
-                }
+            .#menu .nav-item:hover .dropdown-menu {
+                display: block;
+            }
 
-                .navbar .nav-item .dropdown-menu {
-                    margin-top: 0;
-                }
+            #menu .nav-item .dropdown-menu {
+                margin-top: 0;
+            }
 
-                .dropdown-menu {
-                    background-color: rgb(13, 13, 31) !important;
-                }
+            .dropdown-menu {
+                background-color: rgb(13, 13, 31) !important;
+            }
 
-                .dropdown-item {
-                    margin-top: 10px !important;
-                }
+            .dropdown-item {
+                margin-top: 10px !important;
+            }
 
-                .dropdown-item:hover {
-                    background-color: rgb(13, 13, 31) !important;
-                    color: red !important;
-                }
+            .dropdown-item:hover {
+                background-color: rgb(13, 13, 31) !important;
+                color: red !important;
             }
 
         </style>
         <div class="container">
             <ul id="menu" class="desktop-992">
                 @foreach ($cats as $row)
-                    <li class="nav-item dropdown" id="dropdownMenuLink{{$row->id}}"><a class="nav-link  dropdown-toggle" aria-haspopup="true" aria-
-                        expanded="false" data-bs-toggle="dropdown"
-                            href="{{ $row->slug . '+' . $row->id . '/cats.html' }}">{{ $row->name }}</a>
+                    <li class="nav-item dropdown" id="dropdownMenuLink{{ $row->id }}"><a
+                            href="{{ $row->slug . '+' . $row->id . '/cats.html' }}" class=" nav-link  dropdown-toggle"
+                            aria-haspopup="true" aria-expanded="false" data-bs-toggle="dropdown" ">{{ $row->name }}</a>
                         <?php if(!empty($row->child)){ ?>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink{{$row->id}}">
+                        <ul class="    dropdown-menu" aria-labelledby="dropdownMenuLink{{ $row->id }}">
                             @foreach ($row->child as $child)
-                                <li><a class="dropdown-item"
-                                        href="{{ $child->slug . '+' . $child->id . '/cats.html' }}">{{ $child->name }}</a>
-                                </li>
-                            @endforeach
-                        </ul>
-                        <?php }?>
+                    <li><a class="dropdown-item" href="{{ $child->slug . '+' . $child->id . '/cats.html' }}">{{ $child->name }}</a>
                     </li>
+                 @endforeach
+                    </ul>
+                    <?php }?>
+                </li>
                 @endforeach
 
                 <li><a href="about_us">Về chúng tôi</a></li>

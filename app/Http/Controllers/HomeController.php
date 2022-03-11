@@ -53,7 +53,7 @@ class HomeController extends Controller
         $sliders = Slider::take(3)->latest()->get();
         $posts = Post::paginate(5, ['*'], 'post');
         // $products = Product::simplePaginate(4, ['*'], 'product');
-        return view('pages.home', ['posts' => $posts, 'sliders' => $sliders, 'products' => $products??'', 'intercooperations' => $intercooperations]);
+        return view('pages.home', ['posts' => $posts, 'sliders' => $sliders, 'products' => $products ?? '', 'intercooperations' => $intercooperations]);
     }
     public function posts($slug, $id)
     {
@@ -64,24 +64,31 @@ class HomeController extends Controller
             Session::put($sessionKey, 1); //set giá trị cho session
             $post->increment('count_views');
         }
-
-        $postOthers = Post::where('category_id', $post->category_id)->where('id', '!=', $post->id)->take(12)->latest()->get();
-        return view('pages.posts', ['post' => $post, 'postOthers' => $postOthers]);
+        $category_id = $post->category_id;
+        $posts = Post::join('categories', 'categories.id', '=', 'posts.category_id')
+            ->where(function ($query) use ($category_id) {
+                $query->where('categories.id', $category_id)
+                    ->orWhere('categories.parent_id', 0);
+            })->where('posts.id', '!=', $post->id)
+            ->select('posts.*')
+            ->latest()
+            ->paginate(4, ['*'], 'post');;
+        return view('pages.posts', ['post' => $post, 'posts' => $posts]);
     }
     public function cats($slug, $id)
     {
         //$category=new Category();
         // $cats=$category->getDataTreeChild($id);
         $cat = Category::findOrFail($id);
-        $catChildIds=Category::where('parent_id',$cat->id)->pluck('id')->toArray();
+        $catChildIds = Category::where('parent_id', $cat->id)->pluck('id')->toArray();
         switch ($cat->type) {
             case 'product':
                 $intercooperations = Intercooperation::take(8)->latest()->get();
-                $products = Product::where('category_id', $id)->orWhereIn('category_id',$catChildIds)->paginate(12);
+                $products = Product::where('category_id', $id)->orWhereIn('category_id', $catChildIds)->paginate(12);
                 return view('pages.cat_product', ['products' => $products, 'intercooperations' => $intercooperations, 'cat' => $cat]);
                 break;
             default:
-                $posts = Post::where('category_id', $id)->orWhereIn('category_id',$catChildIds)->latest()->paginate(6);
+                $posts = Post::where('category_id', $id)->orWhereIn('category_id', $catChildIds)->latest()->paginate(6);
                 return view('pages.cat_posts', ['posts' => $posts, 'cat' => $cat]);
                 break;
         }

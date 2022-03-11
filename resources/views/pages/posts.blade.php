@@ -50,7 +50,7 @@
 
             color: #0d6efd!important;
 
-            font-size: 20px !important;
+            font-size: 22px !important;
 
         }
 
@@ -128,14 +128,14 @@
 
     <div class="container">
 
-        <div class="row">
+        <div class="row mgb-40">
             <div class="col-md-2">
             </div>
             <div class="wrapTypicalSuccess mgt-40 col-md-8 col-sm-12">
 
                 <h1 class="h1_name">{{ $post->name }}</h1>
 
-                <div class="share">
+                <div class="share" style="line-height: 10px">
                         <span><a href="https://www.youtube.com/channel/UCezizb5kh-rcla61D6TJ6GQ" target="_blank"> <i
                                     style=" color: red;" class="fa fa-youtube" aria-hidden="true">Youtube</i></a> <a
                                 href="https://www.facebook.com/xulyanhcongnghiep" target="_blank"> <i style=" color: blue;"
@@ -154,16 +154,11 @@
                 @endif
 
                 <div class="content">{!! $post->content !!}</div>
-
-                @include('inc.comment',['id'=>$post->id])
-
-
-
             </div>
 
             <div class="col-md-2">
             </div>
         </div>
-
+        @include('inc.service_cate')
     </div>
 @endsection
