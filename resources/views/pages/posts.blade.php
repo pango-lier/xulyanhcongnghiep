@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('title')
-    <title>{{ 'Xử lý ảnh ' . $post->name }}</title>
+    <title>{{ $post->name }}</title>
 
     <meta name="description" content="{{ $post->name }}" />
 @endsection
@@ -48,7 +48,7 @@
 
         .h1_name {
 
-            color: #0d6efd!important;
+            color: #0d6efd !important;
 
             font-size: 22px !important;
 
@@ -136,10 +136,10 @@
                 <h1 class="h1_name">{{ $post->name }}</h1>
 
                 <div class="share" style="line-height: 10px">
-                        <span><a href="https://www.youtube.com/channel/UCezizb5kh-rcla61D6TJ6GQ" target="_blank"> <i
-                                    style=" color: red;" class="fa fa-youtube" aria-hidden="true">Youtube</i></a> <a
-                                href="https://www.facebook.com/xulyanhcongnghiep" target="_blank"> <i style=" color: blue;"
-                                    class="fa fa-facebook-square" aria-hidden="true"> Facebook</i></a></span>
+                    <span><a href="https://www.youtube.com/channel/UCezizb5kh-rcla61D6TJ6GQ" target="_blank"> <i
+                                style=" color: red;" class="fa fa-youtube" aria-hidden="true">Youtube</i></a> <a
+                            href="https://www.facebook.com/xulyanhcongnghiep" target="_blank"> <i style=" color: blue;"
+                                class="fa fa-facebook-square" aria-hidden="true"> Facebook</i></a></span>
 
                 </div>
 

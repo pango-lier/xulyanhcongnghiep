@@ -58,6 +58,7 @@
         </style>
         <div class="container">
             <ul id="menu" class="desktop-992">
+                <li><a href="/">Trang chủ</a></li>
                 @foreach ($cats as $row)
                     <li class="nav-item dropdown" id="dropdownMenuLink{{ $row->id }}"><a
                             href="{{ $row->slug . '+' . $row->id . '/cats.html' }}" class=" nav-link  dropdown-toggle"
@@ -95,6 +96,10 @@
                         @foreach ($cats as $row)
                             <li><a href="{{ $row->slug . '+' . $row->id . '/cats.html' }}">{{ $row->name }}</a>
                             </li>
+                            @foreach ($row->child as $child)
+                    <li style="line-height:9px;font-size:10px"><a href="{{ $child->slug . '+' . $child->id . '/cats.html' }}">{{' - '}}{{ $child->name }}</a>
+                    </li>
+                 @endforeach
                         @endforeach
 
                     </ul>

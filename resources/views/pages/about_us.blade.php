@@ -2,9 +2,9 @@
 
 @section('title')
 
-<title>công ty xử lý ảnh Việt Nam - Xử lý ảnh Labview - Camera cho xử lý ảnh - Xử lý ảnh công nghiệp</title>
+<title>{{$_about_us??''}}</title>
 
-	<meta name="description" content="xử lý ảnh- ứng dụng xử lý ảnh - Camera xử lý ảnh công nghiệp - tại sao sử dụng xử lý ảnh" />
+	<meta name="description" content="{{$_about_us_title??''}}" />
 
 @endsection
 
