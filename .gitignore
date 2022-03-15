@@ -1,7 +1,7 @@
 node_modules
 .env
 .htaccess
-storage/logs/
+storage/*
 public/.htaccess
 public/.htaccess2
 vendor

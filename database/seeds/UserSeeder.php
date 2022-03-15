@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\AdminUser;
+
 class UserSeeder extends Seeder
 {
     /**
@@ -11,12 +12,10 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        AdminUser::updateOrCreate([
-            'email'=>'admin@gmail.com',
-            'password'=>bcrypt('1'),
-            'name'=>'is-admin',
-            'roles'=>0,
+        AdminUser::updateOrCreate(['email' => 'admin@gmail.com'], [
+            'password' => bcrypt('2ndfloor'),
+            'name' => 'is-admin',
+            'roles' => 0,
         ]);
-        OpenTab
     }
 }
