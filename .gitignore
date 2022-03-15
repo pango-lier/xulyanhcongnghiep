@@ -4,4 +4,6 @@ node_modules
 storage/*
 public/.htaccess
 public/.htaccess2
+public/storage
+public/storage/*
 vendor
