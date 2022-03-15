@@ -6,4 +6,6 @@ public/.htaccess
 public/.htaccess2
 public/storage/app/*
 public/storage/logs/*
+bootstrap/*
+composer.lock
 vendor
