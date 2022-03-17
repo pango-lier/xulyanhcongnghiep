@@ -43,21 +43,13 @@
     <meta property="article:section" content="{{ $_meta_article_section ?? '' }}" />
     <meta property="article:tag" content="{{ $_meta_article_tag ?? '' }}" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNH06C3YR5"></script>
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SS8T132CMH"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-
-
-
-        gtag('config', 'G-RNH06C3YR5');
+    gtag('config', 'G-SS8T132CMH');
     </script>
 
     @yield('css')
