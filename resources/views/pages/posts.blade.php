@@ -136,9 +136,9 @@
                 <h1 class="h1_name">{{ $post->name }}</h1>
 
                 <div class="share" style="line-height: 10px">
-                    <span><a href="{{$_footer_youtube_link??'' target="_blank"> <i
-                                style=" color: red;" class="fa fa-youtube" aria-hidden="true">Youtube</i></a> <a
-                            href="{{$_footer_facebook_link??''}}" target="_blank"> <i style=" color: blue;"
+                    <span><a href="{{ $_footer_youtube_link ?? '' }}" target="_blank"> <i style=" color: red;"
+                                class="fa fa-youtube" aria-hidden="true">Youtube</i></a> <a
+                            href="{{ $_footer_facebook_link ?? '' }}" target="_blank"> <i style=" color: blue;"
                                 class="fa fa-facebook-square" aria-hidden="true"> Facebook</i></a></span>
 
                 </div>
