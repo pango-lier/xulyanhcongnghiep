@@ -30,6 +30,6 @@ class checkoutMail extends Mailable
      */
     public function build()
     {
-        return $this->subject('Checkout from Xulyanhcongnghiep.com')->view('mail.checkout');
+        return $this->subject('Checkout from nhomkinhdalat.com')->view('mail.checkout');
     }
 }

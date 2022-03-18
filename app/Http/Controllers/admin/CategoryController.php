@@ -25,7 +25,8 @@ class CategoryController extends Controller
     }
     public function store(CategoryStoreRequest $request){
     	$this->cats->name=$request->name;
-    	$this->cats->slug=Str::slug($request->name,'-');
+        $this->cats->meta_title=$request->meta_title;
+    	$this->cats->slug=Str::slug(empty($request->meta_title)?$request->name:$request->meta_title,'-');
     	$this->cats->parent_id=$request->parent_id;
         $this->cats->description=$request->description;
         $this->cats->type=$request->type;
@@ -45,7 +46,8 @@ class CategoryController extends Controller
     $cat->name=$request->name;
     $cat->type=$request->type;
     $cat->description=$request->description;
-    $cat->slug=Str::slug($request->name,'-');
+    $cat->meta_title=$request->meta_title;
+    $cat->slug=Str::slug(empty($request->meta_title)?$request->name:$request->meta_title,'-');
    if($id!=$request->parent_id) $cat->parent_id=$request->parent_id;
     $cat->save();
     return redirect('admin/category');

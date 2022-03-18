@@ -20,8 +20,8 @@ th {
   height: 30px;
 }
 </style>
-<body>	<h3>Order processing by xulyanhcongnghiep.com,</h3>
-		
+<body>	<h3>Order processing by </h3>
+
 		<p style="font-weight: bold;">
 		 Sent from : sales@vstech.com.vn<br>
 		 Name : {{$customer->name}}<br>
@@ -55,6 +55,6 @@ th {
 		<p>Thanks & Best Regards,<br><span>** Please note: Do not reply to this email.<br>Contact all at email : sales@vstech.com.vn </span><br>
 		** Vui lòng không trả lời lại email này. <br>Mọi thông tin liên lạc qua email : sales@vstech.com.vn
 		</p>
-		
+
 </body>
 </html>
