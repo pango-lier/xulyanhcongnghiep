@@ -12,7 +12,7 @@
 		max-width: 800px;
 	}
 </style>
-<body>	<h3>Contact information xulyanhcongnghiep.com,</h3>
+<body>	<h3>Contact information nhomkinhdalat.com,</h3>
 		<p style="font-weight: bold;">
 		 Sent from : sales@vstech.com.vn<br>
 		 Name : {{$mail['name']}}<br>
@@ -21,9 +21,9 @@
 		<p>Messages</p>
 		<p style="font-style: italic;">{{$mail['message']}}</p>
 		<p></p>
-		<p>Thanks & Best Regards,<br><span>** Please note: Do not reply to this email.<br>Contact all at email : sales@vstech.com.vn </span><br>
-		** Vui lòng không trả lời lại email này. <br>Mọi thông tin liên lạc qua email : sales@vstech.com.vn
+		<p>Thanks & Best Regards,<br><span>** Please note: Do not reply to this email.<br>Contact all at email : kinhdoanh11.bt@gmail.com</span><br>
+		** Vui lòng không trả lời lại email này. <br>Mọi thông tin liên lạc qua email : kinhdoanh11.bt@gmail.com
 		</p>
-		
+
 </body>
 </html>

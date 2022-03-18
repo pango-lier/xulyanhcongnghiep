@@ -13,12 +13,12 @@ class ajaxController extends Controller
     public function postMail(Request $request)
     {
         $mail=$request->all();
-        Mail::to("sales@vstech.com.vn")->send(new contactMail($mail));
+        Mail::to("kinhdoanh11.bt@gmail.com")->send(new contactMail($mail));
         return redirect('/');
     }
-    
+
     public function addToCart(){
 
     }
-    
+
 }
