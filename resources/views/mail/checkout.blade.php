@@ -23,7 +23,7 @@ th {
 <body>	<h3>Order processing by </h3>
 
 		<p style="font-weight: bold;">
-		 Sent from : sales@vstech.com.vn<br>
+		 Sent from : kinhdoanh11.bt@gmail.com<br>
 		 Name : {{$customer->name}}<br>
 		 Email : {{$customer->email}}<br>
 		 Address : {{$customer->address}} <br>
@@ -52,7 +52,7 @@ th {
 				@endforeach
 			</table>
 		</div>
-		<p>Thanks & Best Regards,<br><span>** Please note: Do not reply to this email.<br>Contact all at email : sales@vstech.com.vn </span><br>
+		<p>Thanks & Best Regards,<br><span>** Please note: Do not reply to this email.<br>Contact all at email : W </span><br>
 		** Vui lòng không trả lời lại email này. <br>Mọi thông tin liên lạc qua email : sales@vstech.com.vn
 		</p>
 
