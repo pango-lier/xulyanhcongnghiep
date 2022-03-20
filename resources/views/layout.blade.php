@@ -1,29 +1,20 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="vi">
 
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-
 <head>
-
     <meta charset="utf-8" />
-
     <meta name="viewport" content="width=device-width,&#32;initial-scale=1.0" />
-
     @yield('title')
 
-    <meta http-equiv=”content-language” content=”vi” />
+    <meta http-equiv="content-language" content="vi" />
     <meta name="keywords" content="{{ $_meta_keywords ?? 'cửa kính cường lực' }}" />
-    <meta name=’revisit-after’ content=’1 days’ />
-
-    <link href=”favicon.ico” rel=”shortcut icon” type=”image/x-icon” />
-
+    <meta name="revisit-after" content="1 days" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <base href="{{ asset('') }}">
-
     <link rel="icon" type="image/png" href="/favicon.ico" />
-
     <link href="/lib/Content/cssc852.css?v=RK23pIWKolpaTcMpIexJZaNffU1BZ_m0pnGWDeAZtBo1" rel="stylesheet" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->

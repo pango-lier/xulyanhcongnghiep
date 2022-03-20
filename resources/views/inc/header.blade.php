@@ -3,7 +3,7 @@
         <div class="pull-left logo" style="margin-top:10px">
             <a href="/">
                 <p>{{ $_header_logo_title ?? '' }}</p>
-                <img style="width:80px;" src="/favicon.ico" alt="{{ $_header_logo_title ?? '' }}" />
+                <img style="width:80px;" src="/favicon120x120.ico" alt="{{ $_header_logo_title ?? '' }}" />
 
             </a>
 
