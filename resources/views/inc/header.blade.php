@@ -3,7 +3,7 @@
         <div class="pull-left logo" style="margin-top:10px">
             <a href="/">
                 <p>{{ $_header_logo_title ?? '' }}</p>
-                <img style="width:80px;" src="/favicon.ico" alt="{{ $_header_logo_title ?? '' }}" />
+                <img style="width:80px;" src="/favicon120x120.ico" alt="{{ $_header_logo_title ?? '' }}" />
 
             </a>
 
@@ -17,10 +17,10 @@
             <div class="hotline">Hotline: <span id="lbHotLine"> {{ $_footer_phone_1 ?? '' }}</span></div>
 
             <div class="clr"></div>
-
-            <div class="search"><input name="ctl00$txtSearchText" type="text" id="txtSearchText"
+            <div class="search" style="color:rgb(96, 252, 6);font-size:14px;font-weight:bold;margin-left:80px">Nhận Thi Công Nhôm Kính ở Đà Lạt</div>
+            {{-- <div class="search"><input name="ctl00$txtSearchText" type="text" id="txtSearchText"
                     placeholder="Tìm&#32;ki&#7871;m..." /><input type="submit" name="ctl00$btnSearch" value=""
-                    id="btnSearch" /></div>
+                    id="btnSearch" /></div> --}}
         </div>
     </div>
     <div class="bot-head">

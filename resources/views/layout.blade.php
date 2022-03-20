@@ -1,47 +1,22 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="vi">
 
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-
 <head>
-
     <meta charset="utf-8" />
-
     <meta name="viewport" content="width=device-width,&#32;initial-scale=1.0" />
-
     @yield('title')
 
-    <meta http-equiv=”content-language” content=”vi” />
+    <meta http-equiv="content-language" content="vi" />
     <meta name="keywords" content="{{ $_meta_keywords ?? 'cửa kính cường lực' }}" />
-    <meta name=’revisit-after’ content=’1 days’ />
-
-    <link href=”favicon.ico” rel=”shortcut icon” type=”image/x-icon” />
-
+    <meta name="revisit-after" content="1 days" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <base href="{{ asset('') }}">
-
     <link rel="icon" type="image/png" href="/favicon.ico" />
-
     <link href="/lib/Content/cssc852.css?v=RK23pIWKolpaTcMpIexJZaNffU1BZ_m0pnGWDeAZtBo1" rel="stylesheet" />
 
-    <?php if(isset($sliders[0]->img_path)) {?>
-
-    <meta property=”og:image” content="{{ $_meta_image ?? $sliders[0]->img_path }}"" />
-
-    <meta itemprop=”image” content=”{{ $sliders[0]->img_path }}“>
-
-    <?php }?>
-    <meta property=" fb:admins" content="${{ $_meta_facebook_admin_id??''}}" />
-    <meta property="fb:app_id" content="{{ $_meta_facebook_app_id ?? '' }}" />
-    <meta property="og:type" content="article" />
-    <meta property="og:locale" content="vi_VN" />
-    <meta property=”og:title” content="{{ $_meta_title ?? '' }}" />
-    <meta property=”og:description” content="{{ $_meta_description ?? '' }}" />
-    <meta property="og:url" content="{{ $_meta_url??''}}" />
-    <meta property="article:section" content="{{ $_meta_article_section ?? '' }}" />
-    <meta property="article:tag" content="{{ $_meta_article_tag ?? '' }}" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SS8T132CMH"></script>
     <script>

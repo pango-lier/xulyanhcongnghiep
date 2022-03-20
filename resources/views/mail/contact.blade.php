@@ -14,7 +14,7 @@
 </style>
 <body>	<h3>Contact information nhomkinhdalat.com,</h3>
 		<p style="font-weight: bold;">
-		 Sent from : sales@vstech.com.vn<br>
+		 Sent from : kinhdoanh11.bt@gmail.com<br>
 		 Name : {{$mail['name']}}<br>
 		 Email : {{$mail['email']}}<br>
 		 Phone : {{$mail['phone']}} </p>
