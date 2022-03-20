@@ -2,8 +2,18 @@
 
 @section('title')
     <title>{{ $post->name }}</title>
-
-    <meta name="description" content="{{ $post->name }}" />
+    <meta name="description" content="{{ $post->description }}" />
+    <meta property=”og:image” content="{{ asset($post->img_path) ?? ($_meta_image ?? '') }}" />
+    <meta itemprop=”image” content=" {{ asset($post->img_path) }}">
+    <meta property=" fb:admins" content="{{ $_meta_facebook_admin_id ?? '' }}" />
+    <meta property="fb:app_id" content="{{ $_meta_facebook_app_id ?? '' }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property=”og:title” content="{{ $post->title ?? $_meta_title ?? '' }}" />
+    <meta property=”og:description” content="{{ $post->description ?? $_meta_description ?? '' }}" />
+    <meta property="og:url" content="{{ asset($post->slug . '+' . $post->id . '.html') ?? $_meta_url ?? '' }}" />
+    <meta property="article:section" content="{{ $_meta_article_section ?? '' }}" />
+    <meta property="article:tag" content="{{ $post->tag ?? $_meta_article_tag ?? '' }}" />
 @endsection
 
 @section('css')
