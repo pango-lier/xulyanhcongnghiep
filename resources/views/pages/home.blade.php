@@ -25,29 +25,27 @@
 
             <?php $leng=count($cats);if($leng>3)$leng=3; for( $key=0;$key<$leng;$key++) { $row=$cats[$key];?>
 
-            <div class="item wow slideInDown">
+                <div class="item wow slideInDown">
 
-                <div class="content">
+                    <div class="content">
 
-                    <div class="wrap-item">
+                        <div class="wrap-item">
 
-                        <img src="/lib/assets/images/@if ($key == 0) gpcn.png @elseif($key == 1)dichvu.png @elseif($key == 2)tuvan.png @elseif($key == 3)gpn.png @endif"
-                            alt="{{ $row->slug }}" title="{{ $row->name }}" />
+                            <img src="/lib/assets/images/@if($key==0)gpcn.png @elseif($key==1)dichvu.png @elseif($key==2)tuvan.png @elseif($key==3)gpn.png @endif" alt="{{$row->slug}}"  title="{{$row->name}}" />
 
-                        <h1><b>{{ $row->name }}</b></h1>
+                            <h1><b>{{$row->name}}</b></h1>
 
-                        <div class="description">{{ $row->description }}</div>
+                            <div class="description">{{$row->description}}</div>
 
-                        <div class="readmore"><a href="{{ $row->slug . '+' . $row->id . '/cats.html' }}" target="_blank">Xem
-                                chi tiết</a></div>
+                            <div class="readmore"><a href="{{$row->slug.'+'.$row->id.'/cats.html'}}" target="_blank">Xem chi tiết</a></div>
+
+                        </div>
 
                     </div>
 
                 </div>
 
-            </div>
-
-            <?php } ?>
+<?php } ?>
 
 
             <div class="item wow slideInDown">
