@@ -67,7 +67,7 @@
         .content {
 
             margin-top: 15px;
-
+            font-size: 18px;
         }
 
         .header-rb {
