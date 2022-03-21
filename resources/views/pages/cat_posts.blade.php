@@ -42,7 +42,7 @@
 
                             <h1 style="text-align: center;">{{ $row->name }}</h1>
 
-                            <div style="text-align: justify;">{{ $row->description }}</div>
+                            <div style="text-align: justify; font-size:18px">{{ $row->description }}</div>
 
                             <div class="readmore desktop-992">
 

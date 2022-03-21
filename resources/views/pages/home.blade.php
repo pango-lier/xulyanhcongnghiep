@@ -35,7 +35,7 @@
 
                             <h1><b>{{$row->name}}</b></h1>
 
-                            <div class="description">{{$row->description}}</div>
+                            <div class="description" style="font-size: 16px">{{$row->description}}</div>
 
                             <div class="readmore"><a href="{{$row->slug.'+'.$row->id.'/cats.html'}}" target="_blank">Xem chi tiết</a></div>
 
@@ -58,7 +58,7 @@
 
                         <h1><b>{{ $_contact ?? '' }}</b></h1>
 
-                        <div class="description">{{ $_contact_description ?? '' }}</div>
+                        <div class="description"  style="font-size: 18px">{{ $_contact_description ?? '' }}</div>
 
                         <div class="readmore"><a href="about_us#contact_us">Xem chi tiết</a></div>
 
