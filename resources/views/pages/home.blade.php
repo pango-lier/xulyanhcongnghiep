@@ -3,14 +3,14 @@
 @section('title')
     <title>{{ $_meta_title ?? '' }}</title>
     <meta name="description" content="{{ $_meta_description ?? '' }}" />
-    <meta property=”og:image” content="{{ $_meta_image ?? '' }}" />
-    <meta itemprop=”image” content=" {{ $_meta_image ?? '' }}">
+    <meta property="og:image" content="{{ $_meta_image ?? '' }}" />
+    <meta itemprop="image" content=" {{ $_meta_image ?? '' }}" />
     <meta property="fb:admins" content="${{ $_meta_facebook_admin_id ?? '' }}" />
     <meta property="fb:app_id" content="{{ $_meta_facebook_app_id ?? '' }}" />
     <meta property="og:type" content="article" />
     <meta property="og:locale" content="vi_VN" />
-    <meta property=”og:title” content="{{ $_meta_title ?? '' }}" />
-    <meta property=”og:description” content="{{ $_meta_description ?? '' }}" />
+    <meta property="og:title" content="{{ $_meta_title ?? '' }}" />
+    <meta property="og:description" content="{{ $_meta_description ?? '' }}" />
     <meta property="og:url" content="{{ $_meta_url ?? '' }}" />
     <meta property="article:section" content="{{ $_meta_article_section ?? '' }}" />
     <meta property="article:tag" content="{{ $_meta_article_tag??'' }}" />
