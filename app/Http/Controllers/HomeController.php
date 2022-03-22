@@ -51,7 +51,7 @@ class HomeController extends Controller
         //  $catdes=Catdes::take(3)->get();
         $intercooperations = Intercooperation::take(7)->latest()->get();
         $sliders = Slider::take(3)->latest()->get();
-        $posts = Post::paginate(6, ['*'], 'post');
+        $posts = Post::paginate(10, ['*'], 'post');
         // $products = Product::simplePaginate(4, ['*'], 'product');
         return view('pages.home', ['posts' => $posts, 'sliders' => $sliders, 'products' => $products ?? '', 'intercooperations' => $intercooperations]);
     }
@@ -68,11 +68,13 @@ class HomeController extends Controller
         $posts = Post::join('categories', 'categories.id', '=', 'posts.category_id')
             ->where(function ($query) use ($category_id) {
                 $query->where('categories.id', $category_id)
-                    ->orWhere('categories.parent_id', 0);
+                    ->orWhere('categories.parent_id', 0)
+                    ->orWhere('categories.parent_id', 1);
             })->where('posts.id', '!=', $post->id)
             ->select('posts.*')
             ->latest()
-            ->paginate(5, ['*'], 'post');;
+            ->paginate(6, ['*'], 'post');
+        ;
         return view('pages.posts', ['post' => $post, 'posts' => $posts]);
     }
     public function cats($slug, $id)
@@ -98,9 +100,8 @@ class HomeController extends Controller
         $intercooperations = Intercooperation::take(8)->latest()->get();
         return view('pages.about_us', ['intercooperations' => $intercooperations]);
     }
-    function product($slug, $id)
+    public function product($slug, $id)
     {
-
         $product = Product::findOrFail($id);
         $productOthers = Product::where('category_id', $product->category_id)->where('id', '!=', $product->id)->take(8)->latest()->get();
         return view('pages.product', ['product' => $product, 'productOthers' => $productOthers]);
@@ -114,7 +115,9 @@ class HomeController extends Controller
         //dd($cart);
         $total = str_replace(',', '', Cart::total());
         $cart_count = Cart::count();
-        if ($cart_count > 0) session()->put('cart-count', $cart_count);
+        if ($cart_count > 0) {
+            session()->put('cart-count', $cart_count);
+        }
         return view('pages.checkout', ['cart' => $cart, 'title' => $title, 'total' => $total]);
     }
 }

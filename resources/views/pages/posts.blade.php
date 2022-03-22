@@ -14,6 +14,8 @@
     <meta property="og:url" content="{{ asset($post->slug . '+' . $post->id . '.html') ?? $_meta_url ?? '' }}" />
     <meta property="article:section" content="{{ $_meta_article_section ?? '' }}" />
     <meta property="article:tag" content="{{ $post->tag ?? $_meta_article_tag ?? '' }}" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6820106529386853"
+     crossorigin="anonymous"></script>
 @endsection
 
 @section('css')
