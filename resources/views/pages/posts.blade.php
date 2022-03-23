@@ -142,6 +142,18 @@
 
         <div class="row mgb-40">
             <div class="col-md-2">
+                <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-format="fluid"
+                data-ad-layout-key="-4w+dg-39-4q+x2"
+                data-ad-client="ca-pub-6820106529386853"
+                data-ad-slot="4610757293"></ins>
+                <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-format="fluid"
+                data-ad-layout-key="-4w+dg-39-4q+x2"
+                data-ad-client="ca-pub-6820106529386853"
+                data-ad-slot="4610757293"></ins>
             </div>
             <div class="wrapTypicalSuccess mgt-40 col-md-8 col-sm-12">
 
@@ -169,8 +181,23 @@
             </div>
 
             <div class="col-md-2">
+                <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-format="fluid"
+                data-ad-layout-key="-4w+dg-39-4q+x2"
+                data-ad-client="ca-pub-6820106529386853"
+                data-ad-slot="4610757293"></ins>
+                <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-format="fluid"
+                data-ad-layout-key="-4w+dg-39-4q+x2"
+                data-ad-client="ca-pub-6820106529386853"
+                data-ad-slot="4610757293"></ins>
             </div>
         </div>
         @include('inc.service_cate')
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
     </div>
 @endsection
