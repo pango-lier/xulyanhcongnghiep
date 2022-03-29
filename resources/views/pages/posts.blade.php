@@ -141,17 +141,7 @@
     <div class="container">
 
         <div class="row mgb-40">
-            <div class="col-md-2">
-                <ins class="adsbygoogle d-none d-lg-block"
-                data-ad-format="fluid"
-                data-ad-layout-key="-4w+dg-39-4q+x2"
-                data-ad-client="ca-pub-6820106529386853"
-                data-ad-slot="4610757293"></ins>
-                <ins class="adsbygoogle d-none d-lg-block"
-                data-ad-format="fluid"
-                data-ad-layout-key="-4w+dg-39-4q+x2"
-                data-ad-client="ca-pub-6820106529386853"
-                data-ad-slot="4610757293"></ins>
+            <div class="col-md-1">
             </div>
             <div class="wrapTypicalSuccess mgt-40 col-md-8 col-sm-12">
 
@@ -178,7 +168,7 @@
                 <div class="content">{!! $post->content !!}</div>
             </div>
 
-            <div class="col-md-2">
+            <div class="col-md-3">
                 <ins class="adsbygoogle"
                 style="display:block"
                 data-ad-format="fluid"
