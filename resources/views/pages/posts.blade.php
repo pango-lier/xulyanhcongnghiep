@@ -47,10 +47,12 @@
             width: 99%;
             height: 99%;
         }
+
         .h1_name {
             color: #0d6efd !important;
             font-size: 22px !important;
         }
+
         .content {
             margin-top: 15px;
             font-size: 18px;
@@ -110,7 +112,7 @@
 
         <ul class="breadcrumb">
 
-            <li><a href="/">Home</a></li>
+            <li><a href="/">nhomkinhdalat.com</a></li>
 
             <li class="active">{{ $post->category->name }}</li>
 
@@ -146,6 +148,7 @@
                 @endif
 
                 <div class="content">{!! $post->content !!}</div>
+                @include('inc.foot_post')
             </div>
 
             <div class="col-md-3">
