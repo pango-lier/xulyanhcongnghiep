@@ -14,8 +14,6 @@
     <meta property="og:url" content="{{ $_meta_url ?? '' }}" />
     <meta property="article:section" content="{{ $_meta_article_section ?? '' }}" />
     <meta property="article:tag" content="{{ $_meta_article_tag??'' }}" />
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6820106529386853"
-    crossorigin="anonymous"></script>
 @endsection
 
 @section('content')
@@ -48,8 +46,6 @@
                 </div>
 
 <?php } ?>
-
-
             <div class="item wow slideInDown">
 
                 <div class="content">
@@ -73,6 +69,11 @@
         </div>
 
         @include('inc.service_cate')
+        <div style="height:200px">
+        <ins id="adsbygoogle1" class="adsbygoogle" style="display:block" data-ad-format="fluid"
+                    data-ad-layout-key="-4w+dg-39-4q+x2" data-ad-client="ca-pub-6820106529386853"
+                    data-ad-slot="4610757293"></ins>
+                </div>
     </div>
     {{-- <div class="container">
         <div class="mgb-40" style="margin-top: 40px">
@@ -84,7 +85,6 @@
         <div class="clr"></div>
         @include('inc.product')
     </div> --}}
-
     @include('inc.intercooperation')
 
     @include('inc.contact')

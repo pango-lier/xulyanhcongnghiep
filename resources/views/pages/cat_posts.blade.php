@@ -14,8 +14,6 @@
     <meta property="og:url" content="{{ asset($cat->slug . '+' . $cat->id . '/cats.html') ?? $_meta_url ?? '' }}" />
     <meta property="article:section" content="{{ $_meta_article_section ?? '' }}" />
     <meta property="article:tag" content="{{ $posts[0]->tag ?? $_meta_article_tag ?? '' }}" />
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6820106529386853"
-     crossorigin="anonymous"></script>
 @endsection
 
 @section('content')
@@ -64,39 +62,22 @@
                             @if ($row->type == 'video')
                                 <style type="text/css">
                                     .youtube {
-
                                         position: relative;
-
                                         padding-bottom: 56.25%;
-
                                         padding-top: 20px;
-
                                         height: 0;
-
                                         overflow: hidden;
-
                                         max-width: 800px;
-
                                         max-height: 600px;
-
                                     }
-
                                     .youtube iframe,
                                     .youtube object,
                                     .youtube embed {
-
                                         position: absolute;
-
                                         top: 0;
-
                                         left: 0;
-
-
-
                                         width: 99%;
-
                                         height: 99%;
-
                                     }
 
                                 </style>
@@ -134,8 +115,5 @@
             <div class="text-center" style="margin-top:5px;">{{ $posts->links() }}</div>
 
         </div>
-
-
-
     </div>
 @endsection

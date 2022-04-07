@@ -9,13 +9,11 @@
     <meta property="fb:app_id" content="{{ $_meta_facebook_app_id ?? '' }}" />
     <meta property="og:type" content="article" />
     <meta property="og:locale" content="vi_VN" />
-    <meta property="og:title" content="{{ $post->title ?? $_meta_title ?? '' }}" />
-    <meta property="og:description" content="{{ $post->description ?? $_meta_description ?? '' }}" />
-    <meta property="og:url" content="{{ asset($post->slug . '+' . $post->id . '.html') ?? $_meta_url ?? '' }}" />
+    <meta property="og:title" content="{{ $post->title ?? ($_meta_title ?? '') }}" />
+    <meta property="og:description" content="{{ $post->description ?? ($_meta_description ?? '') }}" />
+    <meta property="og:url" content="{{ asset($post->slug . '+' . $post->id . '.html') ?? ($_meta_url ?? '') }}" />
     <meta property="article:section" content="{{ $_meta_article_section ?? '' }}" />
-    <meta property="article:tag" content="{{ $post->tag ?? $_meta_article_tag ?? '' }}" />
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6820106529386853"
-     crossorigin="anonymous"></script>
+    <meta property="article:tag" content="{{ $post->tag ?? ($_meta_article_tag ?? '') }}" />
 @endsection
 
 @section('css')
@@ -43,31 +41,17 @@
         .youtube iframe,
         .youtube object,
         .youtube embed {
-
             position: absolute;
-
             top: 0;
-
             left: 0;
-
-
-
             width: 99%;
-
             height: 99%;
-
         }
-
         .h1_name {
-
             color: #0d6efd !important;
-
             font-size: 22px !important;
-
         }
-
         .content {
-
             margin-top: 15px;
             font-size: 18px;
         }
@@ -105,11 +89,7 @@
         }
 
         .right-bar:hover {
-
             color: red;
-
-
-
         }
 
         @media screen and (max-width:767px) {
@@ -169,23 +149,11 @@
             </div>
 
             <div class="col-md-3">
-                <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-format="fluid"
-                data-ad-layout-key="-4w+dg-39-4q+x2"
-                data-ad-client="ca-pub-6820106529386853"
-                data-ad-slot="4610757293"></ins>
-                <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-format="fluid"
-                data-ad-layout-key="-4w+dg-39-4q+x2"
-                data-ad-client="ca-pub-6820106529386853"
-                data-ad-slot="4610757293"></ins>
+                <ins id="adsbygoogle2" class="adsbygoogle" style="display:block" data-ad-format="fluid"
+                    data-ad-layout-key="-4w+dg-39-4q+x2" data-ad-client="ca-pub-6820106529386853"
+                    data-ad-slot="4610757293"></ins>
             </div>
         </div>
         @include('inc.service_cate')
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
     </div>
 @endsection
