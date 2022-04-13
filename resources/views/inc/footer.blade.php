@@ -12,7 +12,7 @@
 
     	<div class="col-xs-12 col-sm-6 col-lg-4">
 
-			<div class="box">
+			<div class="box gradient-sky">
 
 				<div class="icon">
 
@@ -20,9 +20,9 @@
 
 					<div class="info">
 
-						<h3 class="title">Mail & Website</h3>
+						<h3 class="title" style="color:white">Mail & Website</h3>
 
-						<p>
+						<p style="color:white">
 
 							<i style=" color: red;" class="fa fa-envelope" aria-hidden="true"></i>{{$_footer_email??''}}
 
@@ -50,7 +50,7 @@
 
         <div class="col-xs-12 col-sm-6 col-lg-4">
 
-			<div class="box">
+			<div class="box gradient-sky">
 
 				<div class="icon">
 
@@ -58,9 +58,9 @@
 
 					<div class="info">
 
-						<h3 class="title">Điện thoại liên hệ</h3>
+						<h3 class="title" style="color:white">Điện thoại liên hệ</h3>
 
-    					<p>
+    					<p style="color:white">
 
 							<i style="color: green;" class="fa fa-phone-square" aria-hidden="true"></i>{{$_footer_phone_1??''}}
 
@@ -86,7 +86,7 @@
 
         <div class="col-xs-12 col-sm-6 col-lg-4">
 
-			<div class="box">
+			<div class="box gradient-sky">
 
 				<div class="icon">
 
@@ -94,9 +94,9 @@
 
 					<div class="info">
 
-						<h3 class="title">Địa chỉ</h3>
+						<h3 class="title" style="color:white">Địa chỉ</h3>
 
-    					<p>
+    					<p style="color:white">
 
 							 <i style="color: red;" class="fa fa-map-marker" aria-hidden="true"></i>{{$_footer_address_content}}
 
@@ -120,7 +120,7 @@
 
 						</div>
 
-						<div class="copyRight" style="background-color: blue;color:white;font-weight:bold">
+						<div class="copyRight gradient-red" style="color:white;font-weight:bold">
 
 							<p>{{$_footer_copy_right??''}}</p>
 

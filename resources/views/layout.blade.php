@@ -57,7 +57,9 @@
     </div>
 
 			<a href="#" class="scroll-to-top"><i class="fa fa-angle-up"></i></a>
-			<script src="/lib/bundles/modernizr8fce?v=wBEWDufH_8Md-Pbioxomt90vm6tJN2Pyy9u9zHtWsPo1"></script><script src="/lib/bundles/topJS25b8?v=Ws8Syh5_ltoiPSznW-zwN98mBnzmqE3Li1MQxQKfviA1"></script><script src="/lib/assets/js/jquery.lazyload.min.js"></script>
+			<script src="/lib/bundles/modernizr8fce?v=wBEWDufH_8Md-Pbioxomt90vm6tJN2Pyy9u9zHtWsPo1"></script>
+            <script src="/lib/bundles/topJS25b8?v=Ws8Syh5_ltoiPSznW-zwN98mBnzmqE3Li1MQxQKfviA1"></script>
+            <script src="/lib/assets/js/jquery.lazyload.min.js"></script>
 			<script src="/lib/bundles/mainJS6eb1?v=qhSC3X9pRh1c750IrQJb4LetvRbI2jTFQRRxMM5OyL81"></script>
 			@yield('js')
 

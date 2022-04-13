@@ -29,7 +29,7 @@
 
                     <div class="content">
 
-                        <div class="wrap-item">
+                        <div class="wrap-item gradient-red">
 
                             <img src="/lib/assets/images/@if($key==0)gpcn.png @elseif($key==1)dichvu.png @elseif($key==2)tuvan.png @elseif($key==3)gpn.png @endif" alt="{{$row->slug}}"  title="{{$row->name}}" />
 
@@ -50,7 +50,7 @@
 
                 <div class="content">
 
-                    <div class="wrap-item">
+                    <div class="wrap-item gradient-red">
 
                         <img src="/lib/assets/images/gpn.png" alt="" />
 
