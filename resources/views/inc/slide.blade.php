@@ -76,7 +76,7 @@
 
 										</div>
 
-										<h2 style="color: rgb(21, 255, 0)">{{$_slide_title??''}}</h2>
+										<h2 style="color:rgb(182, 11, 11);font-weight: bold">{{$_slide_title??''}}</h2>
 
 										<img class="lazy" src="{{$row->img_path}}"
 
