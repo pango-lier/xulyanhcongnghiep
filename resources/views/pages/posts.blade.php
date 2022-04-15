@@ -112,7 +112,7 @@
 
         <ul class="breadcrumb">
 
-            <li><a href="/">nhomkinhdalat.com</a></li>
+            <li><a href="/">Trang chủ</a></li>
 
             <li class="active">{{ $post->category->name }}</li>
 
