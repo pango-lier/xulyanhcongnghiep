@@ -65,12 +65,16 @@
             background: linear-gradient(to right, #240b36, #c31432) !important;
         }
         .gradient-sky{
-            background: #b92b27 !important;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to left, #1565C0, #b92b27)  !important;  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to left, #1565C0, #b92b27)  !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        }
+            background: #00c6ff !important;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #0072ff, #00c6ff) !important;  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #0072ff, #00c6ff) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+        }
+        .gradient-blue2{
+        background: #0575E6   !important;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #021B79, #0575E6)   !important;  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #021B79, #0575E6)   !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
     </style>
     <div class="bot-head gradient-red">
         <div class="container">
@@ -105,11 +109,8 @@
                 </a> --}}
 
                 <img class="btnMenu" src="/lib/assets/images/stick.png" alt="" />
-
                 <div class="menuHidden">
-
                     <ul class="menutop">
-
                         <li><a href="/">Trang chủ</a></li>
 
                         @foreach ($cats as $row)
