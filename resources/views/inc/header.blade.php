@@ -84,9 +84,9 @@
                     <li class="nav-item dropdown" id="dropdownMenuLink{{ $row->id }}"><a
                             style="pointer-events: none" href="{{ $row->slug . '+' . $row->id . '/cats.html' }}"
                             class=" nav-link  dropdown-toggle" aria-haspopup="true" aria-expanded="false"
-                            data-bs-toggle="dropdown" ">{{ $row->name }}</a>
+                            data-bs-toggle="dropdown" >{{ $row->name }}</a>
                         <?php if(!empty($row->child)){ ?>
-                        <ul class="dropdown-menu gradient-sky" aria-labelledby="dropdownMenuLink{{ $row->id }}">
+                        <ul class="dropdown-menu gradient-blue2" aria-labelledby="dropdownMenuLink{{ $row->id }}">
                             @foreach ($row->child as $child)
                     <div class="menu-child"><a class="dropdown-item"
                             href="{{ $child->slug . '+' . $child->id . '/cats.html' }}">{{ $child->name }}</a>
