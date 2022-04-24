@@ -89,8 +89,8 @@
                                             <a href="admin/setting/edit/{{ $row->id }}"
                                                 class="btn btn-sm btn-success">Sửa</a>
 
-                                            <a href="admin/setting/destroy/{{ $row->id }}"
-                                                class="btn btn-sm btn-danger">Xóa</a>
+                                            {{-- <a href="admin/setting/destroy/{{ $row->id }}"
+                                                class="btn btn-sm btn-danger">Xóa</a> --}}
 
 
 
