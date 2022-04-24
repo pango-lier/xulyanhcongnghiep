@@ -18,12 +18,12 @@
                           <span class="menu-title">Bài viết</span>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link" href="admin/product">
                           <i class="mdi mdi-view-dashboard-outline menu-icon"></i>
                           <span class="menu-title">Sản Phẩm</span>
                         </a>
-                    </li>
+                    </li> --}}
                     <li class="nav-item">
                         <a class="nav-link" href="admin/slider">
                           <i class="mdi mdi-view-dashboard-outline menu-icon"></i>
@@ -44,12 +44,12 @@
                           <span class="menu-title">Đối tác</span>
                         </a>
                      </li>
-                  <li class="nav-item">
+                  {{-- <li class="nav-item">
                         <a class="nav-link" href="admin/comment">
                           <i class="mdi mdi-view-dashboard-outline menu-icon"></i>
                           <span class="menu-title">Bình luận</span>
                         </a>
-                    </li>
+                    </li> --}}
                   <li class="nav-item">
                         <a class="nav-link" href="admin/setting">
                           <i class="mdi mdi-view-dashboard-outline menu-icon"></i>

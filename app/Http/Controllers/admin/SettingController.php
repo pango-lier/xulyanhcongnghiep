@@ -5,19 +5,24 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Setting;
+
 class SettingController extends Controller
 {
     //
-     private $setting;
+    private $setting;
 
     public function __construct(Setting $setting)
     {
         $this->setting = $setting;
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        $settings = $this->setting->latest()->paginate(5);
+        $settings = $this->setting;
+        if ($request->config_key) {
+            $settings =  $settings->where('config_key', 'like', $request->config_key . '%');
+        }
+        $settings = $settings->latest()->paginate(50);
         return view('admin.setting.index', compact('settings'));
     }
 
@@ -52,6 +57,6 @@ class SettingController extends Controller
     public function destroy($id)
     {
         return $this->setting->find($id)->delete();
-         return redirect('admin/setting');
-     }
+        return redirect('admin/setting');
+    }
 }
