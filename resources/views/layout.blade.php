@@ -26,8 +26,8 @@
 
     gtag('config', 'G-SS8T132CMH');
     </script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6820106529386853"
-    crossorigin="anonymous"></script>
+    {{-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6820106529386853"
+    crossorigin="anonymous"></script> --}}
     @yield('css')
 
 </head>

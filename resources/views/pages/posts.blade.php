@@ -150,11 +150,7 @@
                 <div class="content">{!! $post->content !!}</div>
                 @include('inc.foot_post')
             </div>
-
             <div class="col-md-3">
-                <ins id="adsbygoogle2" class="adsbygoogle" style="display:block" data-ad-format="fluid"
-                    data-ad-layout-key="-4w+dg-39-4q+x2" data-ad-client="ca-pub-6820106529386853"
-                    data-ad-slot="4610757293"></ins>
             </div>
         </div>
         @include('inc.service_cate')

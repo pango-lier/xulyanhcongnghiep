@@ -44,7 +44,7 @@ class PostController extends Controller
         $this->posts->type=$request->type;
         if($request->hasFile('img_path')){
         $imageName = 't'.time().rand(1,100).'.'.$request->img_path->getClientOriginalExtension();
-        $img_path_public=$request->file('img_path')->storeAs('public/post',$imageName);    
+        $img_path_public=$request->file('img_path')->storeAs('public/post',$imageName);
        // $img_path_public=$request->file('img_path')->store('public/post');
         //chuyen public ve storrage;
        $this->posts->img_path=Storage::url($img_path_public);
@@ -53,7 +53,7 @@ class PostController extends Controller
         return redirect('admin/post');
     }
     public function edit($id)
-    {   
+    {
         $category=new Category();
         $cats=$category->getDataTreeChild(0);
         $post=$this->posts->find($id);
@@ -74,7 +74,7 @@ class PostController extends Controller
         $post->type=$request->type;
         if($request->hasFile('img_path')){
         $imageName = 't'.time().rand(1,100).'.'.$request->img_path->getClientOriginalExtension();
-        $img_path_public=$request->file('img_path')->storeAs('public/post',$imageName);    
+        $img_path_public=$request->file('img_path')->storeAs('public/post',$imageName);
        // $img_path_public=$request->file('img_path')->store('public/post');
         //chuyen public ve storrage;
        $post->img_path=Storage::url($img_path_public);
