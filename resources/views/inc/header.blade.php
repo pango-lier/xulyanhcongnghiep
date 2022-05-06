@@ -54,27 +54,39 @@
             color: red !important;
             border: none !important;
         }
-        .menu-child{
+
+        .menu-child {
             padding: 5px;
             white-space: nowrap;
             /* display:inline; */
         }
-        .gradient-red{
+
+        .gradient-red {
             background: #c31432 !important;
-            background: -webkit-linear-gradient(to right, #240b36, #c31432) !important;  /* Chrome 10-25, Safari 5.1-6 */
+            background: -webkit-linear-gradient(to right, #240b36, #c31432) !important;
+            /* Chrome 10-25, Safari 5.1-6 */
             background: linear-gradient(to right, #240b36, #c31432) !important;
         }
-        .gradient-sky{
-            background: #00c6ff !important;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #0072ff, #00c6ff) !important;  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #0072ff, #00c6ff) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        .gradient-sky {
+            background: #00c6ff !important;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #0072ff, #00c6ff) !important;
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #0072ff, #00c6ff) !important;
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
         }
-        .gradient-blue2{
-        background: #0575E6   !important;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #021B79, #0575E6)   !important;  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #021B79, #0575E6)   !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        .gradient-blue2 {
+            background: #0575E6 !important;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #021B79, #0575E6) !important;
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #021B79, #0575E6) !important;
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         }
+
     </style>
     <div class="bot-head gradient-red">
         <div class="container">
@@ -84,20 +96,20 @@
                     <li class="nav-item dropdown" id="dropdownMenuLink{{ $row->id }}"><a
                             style="pointer-events: none" href="{{ $row->slug . '+' . $row->id . '/cats.html' }}"
                             class=" nav-link  dropdown-toggle" aria-haspopup="true" aria-expanded="false"
-                            data-bs-toggle="dropdown" >{{ $row->name }}</a>
+                            data-bs-toggle="dropdown">{{ $row->name }}</a>
                         <?php if(!empty($row->child)){ ?>
                         <ul class="dropdown-menu gradient-blue2" aria-labelledby="dropdownMenuLink{{ $row->id }}">
                             @foreach ($row->child as $child)
-                    <div class="menu-child"><a class="dropdown-item"
-                            href="{{ $child->slug . '+' . $child->id . '/cats.html' }}">{{ $child->name }}</a>
-                    </div>
+                                <div class="menu-child"><a class="dropdown-item"
+                                        href="{{ $child->slug . '+' . $child->id . '/cats.html' }}">{{ $child->name }}</a>
+                                </div>
+                            @endforeach
+                        </ul>
+                        <?php }?>
+                    </li>
                 @endforeach
-            </ul>
-            <?php }?>
-            </li>
-            @endforeach
 
-            <li><a href="about_us">Về chúng tôi</a></li>
+                <li><a href="about_us">Về chúng tôi</a></li>
 
             </ul>
 
@@ -118,7 +130,7 @@
                             </li>
                             @foreach ($row->child as $child)
                                 <li style="line-height:9px;font-size:10px"><a
-                                        href="{{ $child->slug . '+' . $child->id . '/cats.html' }}">{{ ' - ' }}{{ $child->name }}</a>
+                                        href="{{ $child->slug . '+' . $child->id . '/cats.html' }}">{{ '    ' }}{{ $child->name }}</a>
                                 </li>
                             @endforeach
                         @endforeach
