@@ -46,6 +46,8 @@ WORKDIR /var/www
 
 RUN chown -R www-data:www-data .
 
+RUN chmod 777 -R storage
+
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 CMD ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
