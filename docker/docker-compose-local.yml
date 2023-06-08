@@ -7,7 +7,7 @@ services:
     volumes:
       - ../:/var/www
     ports:
-      - "5000:80"
+      - "5002:80"
     restart: unless-stopped
     links:
       - app1
@@ -18,32 +18,32 @@ services:
     volumes:
       - ../:/var/www
       - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
-    links:
-      - database
+    # links:
+    #   - database
     restart: unless-stopped
-  adminer:
-    container_name: adminer
-    image: adminer:latest
-    ports:
-      - 5001:8080
-    volumes:
-      - ./uploads.ini:/usr/local/etc/php/conf.d/0-upload_large_dumps.ini
-    restart: unless-stopped
-    depends_on:
-      - database
-  database:
-    image: mysql:5.7.25
-    environment:
-      MYSQL_ROOT_PASSWORD: "${DB_PASSWORD:-root}"
-      MYSQL_DATABASE: "${DB_DATABASE:-root}"
-      MYSQL_USER: "${DB_USERNAME:-root}"
-      MYSQL_PASSWORD: "${DB_PASSWORD:-root}"
-      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
-    ports:
-      - "${DB_PORT:-3306}:3306"
-    restart: unless-stopped
-    volumes:
-      - dbmysql:/var/lib/mysql
+  # adminer:
+  #   container_name: adminer
+  #   image: adminer:latest
+  #   ports:
+  #     - 5001:8080
+  #   volumes:
+  #     - ./uploads.ini:/usr/local/etc/php/conf.d/0-upload_large_dumps.ini
+  #   restart: unless-stopped
+  #   depends_on:
+  #     - database
+  # database:
+  #   image: mysql:5.7.25
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: "${DB_PASSWORD:-root}"
+  #     MYSQL_DATABASE: "${DB_DATABASE:-root}"
+  #     MYSQL_USER: "${DB_USERNAME:-root}"
+  #     MYSQL_PASSWORD: "${DB_PASSWORD:-root}"
+  #     MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+  #   ports:
+  #     - "${DB_PORT:-3306}:3306"
+  #   restart: unless-stopped
+  #   volumes:
+  #     - dbmysql:/var/lib/mysql
 volumes:
   dbmysql:
     driver: local
