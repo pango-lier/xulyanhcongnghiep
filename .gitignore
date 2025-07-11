@@ -8,4 +8,5 @@ public/storage/app/*
 public/storage/logs/*
 public/storage
 composer.lock
+supervisord.log
 vendor
