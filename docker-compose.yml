@@ -1,0 +1,32 @@
+services:
+  app:
+    container_name: nhomkinh_app
+    build:
+      args:
+        user: '${WWW_USER}' # echo $USER
+        uid: '${WWW_ID}' # id -u
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    volumes:
+      - ./:/var/www/html
+      - .docker/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+    networks:
+      - nhomkinh
+
+  webserver:
+    container_name: nhomkinh_nginx
+    image: nginx:alpine
+    restart: always
+    ports:
+      - 5008:80
+    volumes:
+      - ./:/var/www/html
+      - .docker/http.conf:/etc/nginx/nginx.conf:ro
+      - .docker/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - .docker/.htpasswd:/etc/nginx/.htpasswd
+    networks:
+      - nhomkinh
+
+networks:
+  nhomkinh:
