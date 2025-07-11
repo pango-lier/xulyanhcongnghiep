@@ -102,7 +102,7 @@ COPY .docker/supervisord.conf /etc/supervisord.conf
 COPY .docker/supervisor.d/php-fpm.conf /etc/supervisor.d/php-fpm.conf
 COPY .docker/supervisor.d/cron.conf /etc/supervisor.d/cron.conf
 COPY .docker/supervisor.d/worker.conf /etc/supervisor.d/worker.conf
-COPY .docker/supervisor.d/horizon.conf /etc/supervisor.d/horizon.conf
+# COPY .docker/supervisor.d/horizon.conf /etc/supervisor.d/horizon.conf
 
 COPY --chown=$user:$user . .
 
