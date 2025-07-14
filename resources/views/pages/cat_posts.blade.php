@@ -48,7 +48,7 @@
 
                                 <a href="{{ $row->slug . '+' . $row->id . '.html' }}">
 
-                                    <p>Xem chi tiết <i><img alt="Xử lý ảnh công nghiệp" src="lib/assets/images/arr1.png"
+                                    <p>Xem chi tiết <i><img alt="{{ $row->name }}" src="lib/assets/images/arr1.png"
                                                 alt="" /></i></p>
 
                                 </a>
@@ -97,7 +97,7 @@
 
                                 <a href="{{ $row->slug . '+' . $row->id . '.html' }}">
 
-                                    <p>Xem chi tiết <i><img src="lib/assets/images/arr1.png" alt="Xu ly anh" /></i></p>
+                                    <p>Xem chi tiết <i><img src="lib/assets/images/arr1.png" alt="{{ $row->name }}" /></i></p>
 
                                 </a>
 
