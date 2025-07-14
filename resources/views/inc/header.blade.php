@@ -86,6 +86,9 @@
             background: linear-gradient(to right, #021B79, #0575E6) !important;
             /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         }
+        .menuRight {
+            z-index: 50;
+        }
 
     </style>
     <div class="bot-head gradient-red">
