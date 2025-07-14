@@ -18,7 +18,7 @@
 
             <div class="clr"></div>
             <div class="search" style="color:rgb(96, 252, 6);font-size:14px;font-weight:bold;margin-left:80px">
-                Nhận Thi Công Nhôm Kính ở Đà Lạt</div>
+                Nhận Thi Công Nhôm Kính ở {{$_address_area}}</div>
             {{-- <div class="search"><input name="ctl00$txtSearchText" type="text" id="txtSearchText"
                     placeholder="Tìm&#32;ki&#7871;m..." /><input type="submit" name="ctl00$btnSearch" value=""
                     id="btnSearch" /></div> --}}
